@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F7F4;
+  color: #12261F;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #F2A93B;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ticket / slip perforation edge — the site's signature motif */
+.slip-edge {
+  position: relative;
+}
+.slip-edge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #DEDCD0 60%, transparent 0%);
+  background-position: top;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
+
+.stamp-circle {
+  background-image: radial-gradient(circle at center, transparent 62%, currentColor 63%, currentColor 66%, transparent 67%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.prose-howto p {
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  line-height: 1.75;
+}
+.prose-howto h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #0B3D2E;
+}
+.prose-howto ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+.prose-howto li {
+  margin: 0.35rem 0;
+}
