@@ -1,20 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
+
   images: {
-    // Add remote patterns here if you later pull images from a CMS
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
-  },
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
-      },
-    ];
   },
 };
 

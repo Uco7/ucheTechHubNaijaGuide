@@ -3,6 +3,7 @@ import { SECTIONS, CLUSTERS, totalPlanned } from "@/lib/categories";
 import { getAllArticles, getClustersWithCounts } from "@/lib/content";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryCard from "@/components/CategoryCard";
+import HomeSearch from "@/components/HomeSearch";
 import AdSlot from "@/components/AdSlot";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 import { COUNTRIES, getCountriesByRegion } from "@/lib/countries";
@@ -16,19 +17,13 @@ export default function HomePage() {
   const counts = getClustersWithCounts();
   const featured = articles.slice(0, 6);
 
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: SITE_DESCRIPTION,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
-  };
-
+ const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+};
   return (
     <>
       <script
@@ -51,20 +46,7 @@ export default function HomePage() {
               banking and everyday tasks — the same way a knowledgeable friend would explain it, minus the
               wahala.
             </p>
-            <form action="/search" className="mt-8 flex max-w-md gap-2">
-              <input
-                type="search"
-                name="q"
-                placeholder="Try “reset GTBank PIN” or “JAMB slip”"
-                className="w-full rounded-full border border-paper/25 bg-paper/10 px-5 py-3 text-sm text-paper placeholder:text-paper/50 focus:bg-paper focus:text-ink"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-stamp px-5 py-3 text-sm font-semibold text-forest transition hover:bg-stamp-dark"
-              >
-                Search
-              </button>
-            </form>
+          <HomeSearch />
           </div>
 
           {/* Signature "slip" visual */}
