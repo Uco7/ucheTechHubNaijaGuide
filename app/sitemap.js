@@ -25,9 +25,7 @@ export default function sitemap() {
   }));
 
   const articlePages = getAllArticles().map((a) => ({
-    url: `${SITE_URL}${s.slug.startsWith("/") ? s.slug : `/${s.slug}`}`,
-
-
+    url: `${SITE_URL}${a.slug.startsWith("/") ? a.slug : `/${a.slug}`}`,  
     lastModified: new Date(a.updated),
     changeFrequency: "monthly",
     priority: 0.8,
