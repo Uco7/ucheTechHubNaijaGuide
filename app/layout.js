@@ -39,6 +39,9 @@ export const metadata = {
     description: SITE_DESCRIPTION,
     url: SITE_URL,
   },
+  verification: {
+    google: "M60Olg-0SeKKaphxHbi0snS6Gx3UKMKEdPolld_FFbw" ,
+  },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Step-by-step guides for Nigeria`,
