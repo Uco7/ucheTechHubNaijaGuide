@@ -1,3 +1,2 @@
-# Replace this with the exact ads.txt line Google gives you after AdSense approval.
-# It looks like:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+google.com, pub-8923799920726415, DIRECT, f08c47fec0942fa0

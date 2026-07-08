@@ -42,6 +42,9 @@ export const metadata = {
   verification: {
     google: "M60Olg-0SeKKaphxHbi0snS6Gx3UKMKEdPolld_FFbw" ,
   },
+   other: {
+    "google-adsense-account": "ca-pub-8923799920726415",
+  },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Step-by-step guides for Nigeria`,
